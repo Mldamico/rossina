@@ -1,10 +1,10 @@
 "use client";
 import { useUiStore } from "@/store/ui/ui-store";
 import Link from "next/link";
-import React, { useState } from "react";
+import React from "react";
 import { CiMenuBurger } from "react-icons/ci";
 
-export const Nav = () => {
+export const Header = () => {
   const openMenu = useUiStore((state) => state.openSideMenu);
 
   return (
