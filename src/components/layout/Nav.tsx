@@ -8,7 +8,7 @@ export const Nav = () => {
   const openMenu = useUiStore((state) => state.openSideMenu);
 
   return (
-    <div className="w-full bg-red-500 h-28 flex justify-between items-center px-10 sm:px-20 shadow-lg">
+    <div className="w-full bg-red-500 h-28 flex justify-between items-center px-4 sm:px-20 shadow-lg">
       <h1 className="text-white  text-2xl sm:text-4xl">Lenceria Rossina</h1>
       <div className="sm:hidden">
         <button onClick={() => openMenu()}>
