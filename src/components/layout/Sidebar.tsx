@@ -6,11 +6,7 @@ import React from "react";
 import { AiOutlineHome } from "react-icons/ai";
 import { BiStore } from "react-icons/bi";
 import { BsMap } from "react-icons/bs";
-import {
-  IoCloseOutline,
-  IoPersonOutline,
-  IoSearchOutline,
-} from "react-icons/io5";
+import { IoCloseOutline, IoSearchOutline } from "react-icons/io5";
 
 export const Sidebar = () => {
   const isSideMenuOpen = useUiStore((state) => state.isSideMenuOpen);
