@@ -9,3 +9,50 @@ datasource db {
   provider = "sqlite"
   url      = env("DATABASE_URL")
 }
+
+model Category {
+  id String @id @default(uuid())
+  name String @unique
+
+  Product Product[]
+}
+
+model Size {
+  id String @id @default(uuid())
+  name String @unique
+
+  Product Product[]
+}
+
+
+model Color {
+  id String @id @default(uuid())
+  name String @unique
+
+  Product Product[]
+}
+
+
+
+model Product {
+  id String @id @default(uuid())
+  title String
+  description String
+  price Float @default(0)
+  sizes Size[] 
+  slug String @unique
+  colors Color[]
+  category Category @relation(fields: [categoryId], references: [id])
+  categoryId String
+  ProductImage ProductImage[]
+
+}
+
+
+model ProductImage{
+  id Int @id @default(autoincrement())
+  url String
+
+  product Product @relation(fields: [productId], references: [id])
+  productId String
+}
